@@ -2,6 +2,9 @@
 .grey{
   color: #6C757D;
 }
+.black{
+  color: black;
+}
 .t-14px{
   font-size: 14px;
 }
@@ -87,8 +90,6 @@ main{
   padding: .10rem .5rem;
   font-size: .75rem;
 }
-
-
 /*MEDIAQUERY*/
 
 @media screen and (min-width: 991px) {

@@ -1,6 +1,64 @@
 
 /*HEADER*/
 header{
-  height: 90px;
+  position: fixed;
+  z-index: 999;
+  height: 100px;
+  top: 0;
+  left: 0;
   background-color: #F8F9FA;
+}
+.no_padding-x{
+  padding: 0;
+}
+.nv_navbar{
+  background-color: white;
+}
+.navbar-collapse {
+  flex-basis: 0;
+}
+.orange{
+  color: #FF8F00;
+}
+.dropdown-menu[data-bs-popper]{
+  right: 0;
+}
+/*MAIN*/
+main{
+  padding-top: 100px;
+  height: 100vh;
+}
+.menu_sx{
+  width: 60px;
+  height: 100%;
+  background-color: #051E34;
+  background-image: url(../img/sidebar-bg.png);
+}
+.nv_button{
+  background-color: transparent;
+  border: none;
+  border-radius: none;
+  width: 70px;
+}
+.nv_container{
+  background-color: #1B72E8;
+  /*debugg da togliere*/
+  height: 100px;
+
+}
+.studente{
+  
+
+  
+}
+
+
+
+/*MEDIAQUERY*/
+
+@media screen and (min-width: 991px) {
+  .menu_sx {
+      width: 140px;
+  }
+  
 }

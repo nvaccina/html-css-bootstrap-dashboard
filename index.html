@@ -14,9 +14,124 @@
   <title>Dashboard</title>
 </head>
 <body>
-  <header>
-    
+  <header class="d-flex align-items-center w-100">
+
+    <div class="container-fluid no_padding-x">
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary nv_navbar w-100 d-flex">
+        <div class="container-fluid">
+
+          <a class="navbar-brand d-lg-none" href="#">
+            <img src="img/mobile-logo.png" alt="Mobile Logo" width="50" height="50">
+          </a>
+
+          <a class="navbar-brand d-none d-lg-block" href="#">
+            <img src="img/logo.svg" alt="Logo grande">
+          </a>
+
+          
+          <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+
+            <nav class="navbar bg-body-tertiary w-100">
+              <form class="container-fluid">
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                  <input type="text" class="form-control" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              </form>
+            </nav>
+
+            <ul class="navbar-nav me-auto mb-2">
+
+              <li class="nav-item d-none d-lg-block">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <i class="fa-solid fa-list-ul"></i>
+                </a>
+              </li>
+              <li class="nav-item d-none d-lg-block">
+                <a class="nav-link" href="#">
+                  <i class="fa-solid fa-circle-question"></i>
+                </a>
+              </li>
+              <li class="nav-item d-none d-lg-block">
+                <a class="nav-link" href="#">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-bell orange"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+
+            </ul>            
+
+          </div>
+        </div>
+      </nav>
+
+    </div>   
+
   </header>
+  <main class="d-flex">
+
+
+
+    <div class="menu_sx d-flex flex-column align-items-center">
+
+       <div class="btn-group-vertical pt-3" role="group" aria-label="Vertical button group">
+        <button type="button" class="btn btn-dark nv_button d-flex align-items-center">
+          <i class="fa-solid fa-house"></i>
+          <span class="d-none d-lg-block ps-2">Home</span>
+        </button>
+        <button type="button" class="btn btn-dark nv_button d-flex align-items-center">
+          <i class="fa-sharp fa-solid fa-chart-simple"></i>
+          <span class="d-none d-lg-block ps-2">Stats</span>
+        </button>
+        <button type="button" class="btn btn-dark nv_button d-flex align-items-center">
+          <i class="fa-sharp fa-solid fa-signal"></i>
+          <span class="d-none d-lg-block ps-2">Signals</span>
+        </button>
+          
+        <button type="button" class="btn btn-dark nv_button d-flex align-items-center text-bottom">
+          <i class="fa-solid fa-gear"></i>
+          <span class="d-none d-lg-block ps-2">Admin</span>
+        </button>
+          
+      </div>
+    </div>
+
+    <div class="nv_container w-100">
+      <div class="container-fluid w-100">
+        <div class="studente">
+          <div class="row">
+            <div class="col d-flex align-items-center">
+              <p>Nuvo Studente</p>
+              <i class="fa-regular fa-square-plus"></i>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+          </div>
+  
+        </div>
+  
+      </div>
+
+    </div>
+
+
+    
+
+  </main>
   
 </body>
 </html>

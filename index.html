@@ -14,6 +14,7 @@
   <title>Dashboard</title>
 </head>
 <body>
+
   <header class="d-flex align-items-center w-100">
 
     <div class="container-fluid no_padding-x">
@@ -82,6 +83,7 @@
     </div>   
 
   </header>
+
   <main class="d-flex">
 
 
@@ -110,23 +112,200 @@
       </div>
     </div>
 
-    <div class="nv_container w-100">
-      <div class="container-fluid w-100">
-        <div class="studente">
-          <div class="row">
-            <div class="col d-flex align-items-center">
-              <p>Nuvo Studente</p>
-              <i class="fa-regular fa-square-plus"></i>
-            </div>
-            <div class="col"></div>
-            <div class="col"></div>
-          </div>
+    <div class="nv_container w-100 h-100">
+
+      <div class="studente w-100">
+
+        <div class="container-fluid w-100">
+          
+          <div class="row pt-4">
   
+            <div class="col-md-4 col-lg-3 order-md-2 d-flex align-items-center mb-4">
+              <span class="t-14px">Nuvo Studente</span>
+
+              <button type="button" class="btn btn-outline-light ms-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+
+                  <form class="row g-3">
+
+                    <div class="col-md-6">
+                      <label for="name" class="form-label">Nome</label>
+                      <input type="text" class="form-control" id="name">
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="surname" class="form-label">Cognome</label>
+                      <input type="email" class="form-control" id="surname">
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label class="form-label" for="email">Email</label>
+                      <div class="input-group">
+                        <div class="input-group-text">@</div>
+                        <input type="text" class="form-control" id="email">
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+
+                    <div class="col-12">
+                      <label for="inputAddress" class="form-label">Indirizzo</label>
+                      <input type="text" class="form-control" id="inputAddress">
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Città</label>
+                      <input type="text" class="form-control" id="inputCity">
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="inputState" class="form-label">Stato</label>
+                      <select id="inputState" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>Italia</option>
+                        <option>Germania</option>
+                        <option>Francia</option>
+                        <option>Spagna</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-2">
+                      <label for="inputZip" class="form-label">CAP</label>
+                      <input type="text" class="form-control" id="inputZip">
+                    </div>
+
+                    <div class="col-12">
+                      <label class="form-label" for="inputGroupFile02">Foto</label>
+                      <div class="input-group mb-3">
+                      
+                        <input type="file" class="form-control" id="inputGroupFile02">
+                        
+                      </div>
+                    </div>
+
+                    
+
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          Seleziona per proseguire
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Salva</button>
+                      <button type="button" class="btn btn-warning">Svuota</button>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-md-4 col-lg-6 mb-4">
+
+              <div class="piano_blaze d-flex align-items-center">
+                <h4>Boolean</h4>
+                <button type="button" class="btn btn-outline-light btn_studente d-flex align-items-center ms-3">Piano blaze</button>
+              </div>              
+
+              <div class="app d-flex align-items-center">
+                <button type="button" class="btn btn-outline-light btn_studente d-flex align-items-center">3 App</button>
+
+                <i class="fa-solid fa-angles-right ms-1"></i>
+
+                <button type="button" class="btn btn-outline-light   btn_studente d-flex align-items-center d-lg-none ms-1">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <button type="button" class="btn btn-outline-light btn_studente d-flex align-items-center d-none d-lg-block ms-1">Boolean mobile app</button>
+
+                <button type="button" class="btn btn-outline-light btn_studente d-flex align-items-center d-none d-lg-block ms-1">Boolean web app</button>
+
+                <button type="button" class="btn btn-outline-light btn_studente d-flex align-items-center d-none d-lg-block ms-1">Boolean blog app</button>
+
+              </div>
+              
+            </div>
+
+            <div class="col-md-4 col-lg-3 order-md-1 mb-4">
+              <p class="t-14px mb-0">Studenti online negli ultimi 30 minuti</p>
+              <span class="big-count">125</span>
+            </div>
+
+          </div>
+    
+        </div>
+
+      </div>
+
+      <div class="grafici w-100">
+        <div class="container-fluid">
+
+          <div class="prossime-classi">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Nome</th>
+                  <th class="d-none d-md-block text-end" scope="col">Data Inizio</th>
+                  <th class="d-none d-md-block text-end" scope="col">Roi</th>
+                  <th class="text-end" scope="col">Stato</th>
+                  <th class="text-end" scope="col">Azioni</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+
+                  <td scope="row">
+                    <i class="fa-solid fa-code red_code"></i>
+                    <span>Classe 75</span>
+                  </td>
+
+                  <td class="d-none d-md-block py-4 text-end">15 Feb 2021</td>
+
+                  <td class="d-none d-md-block py-4 text-end">20%</td>
+
+                  <td class="text-end">
+
+                    <button type="button" class="btn btn-success btn_mini">Done</button>
+                  </td>
+                  <td class="text-end">
+                    <button type="button" class="btn btn-outline-dark grey">
+                      <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-dark grey">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              
+              </tbody>
+            </table>
+
+          </div>
         </div>
   
       </div>
+      
 
     </div>
+
+    
+
+    
 
 
     

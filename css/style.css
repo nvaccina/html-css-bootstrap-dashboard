@@ -1,3 +1,10 @@
+/*generali*/
+.grey{
+  color: #6C757D;
+}
+.t-14px{
+  font-size: 14px;
+}
 
 /*HEADER*/
 header{
@@ -23,13 +30,14 @@ header{
 .dropdown-menu[data-bs-popper]{
   right: 0;
 }
+
 /*MAIN*/
 main{
   padding-top: 100px;
   height: 100vh;
 }
 .menu_sx{
-  width: 60px;
+  width: 70px;
   height: 100%;
   background-color: #051E34;
   background-image: url(../img/sidebar-bg.png);
@@ -40,18 +48,45 @@ main{
   border-radius: none;
   width: 70px;
 }
+
 .nv_container{
-  background-color: #1B72E8;
-  /*debugg da togliere*/
-  height: 100px;
-
+  color: white;
+  width: calc(100vw - 70px);
 }
-.studente{
-  
-
-  
+.nv_container .studente{
+  background-color: #1B72E8;  
+}
+.btn_studente{
+  height: 25px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.offcanvas.offcanvas-end{
+  width: 100%;
+}
+.big-count{
+  font-size: 30px;
 }
 
+
+.prossime-classi{
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+.red_code{
+  background-color: #F26551;
+  color: white;
+  padding: 7px 5px;
+  border-radius: 50%;
+}
+.btn_mini{
+  padding: .10rem .5rem;
+  font-size: .75rem;
+}
 
 
 /*MEDIAQUERY*/
@@ -60,5 +95,7 @@ main{
   .menu_sx {
       width: 140px;
   }
-  
+  .offcanvas.offcanvas-end{
+    width: 50%;
+  }
 }

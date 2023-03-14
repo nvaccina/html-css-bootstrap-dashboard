@@ -5,9 +5,16 @@
 .black{
   color: black;
 }
+.white{
+  color: white;
+}
 .t-14px{
   font-size: 14px;
 }
+.bdb-g{
+  border-bottom: 2px solid #D2D2D2;
+}
+
 
 /*HEADER*/
 header{
@@ -41,14 +48,14 @@ main{
 }
 .menu_sx{
   width: 70px;
-  height: 100%;
+  height: 100vh;
   background-color: #051E34;
   background-image: url(../img/sidebar-bg.png);
 }
 .nv_button{
   background-color: transparent;
   border: none;
-  border-radius: none;
+  border-radius: 0;
   width: 70px;
 }
 
@@ -73,13 +80,6 @@ main{
 .big-count{
   font-size: 30px;
 }
-
-
-.prossime-classi{
-  border: 1px solid black;
-  border-radius: 10px;
-  margin-top: 2rem;
-}
 .red_code{
   background-color: #F26551;
   color: white;
@@ -90,6 +90,14 @@ main{
   padding: .10rem .5rem;
   font-size: .75rem;
 }
+.nv_layout{
+  border: 2px solid #D2D2D2;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+
+/*---------------------------------------------------*/
 /*MEDIAQUERY*/
 
 @media screen and (min-width: 991px) {
@@ -98,5 +106,10 @@ main{
   }
   .offcanvas.offcanvas-end{
     width: 50%;
+  }
+  .col-student{
+    justify-content: end;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
   }
 }

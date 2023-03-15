@@ -19,32 +19,32 @@
 
     <div class="container-fluid no_padding-x">
 
-      <nav class="navbar navbar-expand-lg bg-body-tertiary nv_navbar w-100 d-flex">
+      <nav class="navbar nv_navbar navbar-expand-lg bg-body-tertiary d-flex w-100 py-0">
         <div class="container-fluid">
 
-          <a class="navbar-brand d-lg-none" href="#">
+          <a class="navbar-brand d-lg-none py-0" href="#">
             <img src="img/mobile-logo.png" alt="Mobile Logo" width="50" height="50">
           </a>
 
-          <a class="navbar-brand d-none d-lg-block" href="#">
+          <a class="navbar-brand d-none d-lg-block py-0" href="#">
             <img src="img/logo.svg" alt="Logo grande">
           </a>
 
           
           <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
 
-            <nav class="navbar bg-body-tertiary w-100">
-              <form class="container-fluid">
+            <nav class="navbar bg-body-tertiary w-100 py-0">
+              <form class="container-fluid px-0">
                 <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1">
+                  <span class="input-group-text bg_search" id="basic-addon1">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </span>
-                  <input type="text" class="form-control" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control bg_search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
               </form>
             </nav>
 
-            <ul class="navbar-nav me-auto mb-2">
+            <ul class="navbar-nav me-auto mx-2 py-0 mb-0">
 
               <li class="nav-item d-none d-lg-block">
                 <a class="nav-link active" aria-current="page" href="#">
@@ -61,12 +61,12 @@
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </a>
               </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="fa-solid fa-bell orange"></i>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-end position-absolute">
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><hr class="dropdown-divider"></li>
@@ -88,27 +88,33 @@
 
 
 
-    <div class="menu_sx d-flex flex-column align-items-center">
+    <div class="menu_sx">
 
-       <div class="btn-group-vertical pt-3" role="group" aria-label="Vertical button group">
-        <button type="button" class="btn btn-dark nv_button d-flex align-items-center">
+       <div class="btn-group-vertical pt-3 d-flex flex-column" role="group" aria-label="Vertical button group">
+
+        <button type="button" class="btn btn-dark nv_button d-flex align-items-center justify-content-center">
           <i class="fa-solid fa-house"></i>
           <span class="d-none d-lg-block ps-2">Home</span>
         </button>
-        <button type="button" class="btn btn-dark nv_button d-flex align-items-center">
+
+        <button type="button" class="btn btn-dark nv_button d-flex align-items-center justify-content-center">
           <i class="fa-sharp fa-solid fa-chart-simple"></i>
-          <span class="d-none d-lg-block ps-2">Stats</span>
+          <span class="d-none d-lg-block ps-3">Stats</span>
         </button>
-        <button type="button" class="btn btn-dark nv_button d-flex align-items-center">
+
+        <button type="button" class="btn btn-dark nv_button d-flex align-items-center justify-content-center">
           <i class="fa-sharp fa-solid fa-signal"></i>
           <span class="d-none d-lg-block ps-2">Signals</span>
-        </button>
-          
-        <button type="button" class="btn btn-dark nv_button d-flex align-items-center text-bottom">
+        </button>                  
+      </div>
+
+      <div class="menu_bot d-flex flex-column-reverse">
+
+        <button type="button" class="btn btn-dark nv_button d-flex align-items-center justify-content-center">
           <i class="fa-solid fa-gear"></i>
           <span class="d-none d-lg-block ps-2">Admin</span>
         </button>
-          
+
       </div>
     </div>
 
@@ -252,310 +258,377 @@
 
       </div>
 
-      <div class="grafici w-100">
+      <div class="tabelle w-100">
 
         <div class="container-fluid">
 
-          <div class="col-lg-8 prossime-classi nv_layout overflow-hidden">
+          <div class="row">
 
-            
-            <h4 class="black bg-body-secondary bdb-g py-3 ps-3">Prossime classi</h4>
-            
-          
-            <table class="table mx-3">
-              <thead>
-                <tr>
-                  <th class="col-4 col-md-6" scope="col">Nome</th>
-                  <th class="col-2 d-none d-md-table-cell" scope="col">Data Inizio</th>
-                  <th class="col-1 d-none d-md-table-cell" scope="col">Roi</th>
-                  <th class="col-4 col-md-1 text-center" scope="col">Stato</th>
-                  <th class="col-4 col-md-2 text-center" scope="col">Azioni</th>
-                </tr>
-              </thead>
+            <div class="col-lg-8 py-4">
 
-              <tbody>
-                <tr>
+              <div class="prossime-classi">
 
-                  <td class="col-4 col-md-6" scope="row">
-                    <i class="fa-solid fa-code red_code"></i>
-                    <span>Classe 75</span>
-                  </td>
+                <div class="card black">
+                  <div class="card-header fs-4 fw-semibold">
+                    Prossime classi
+                  </div>
+                  <div class="card-body">
 
-                  <td class="col-2 d-none d-md-table-cell py-4">15 Feb 2021</td>
-
-                  <td class="col-1 d-none d-md-table-cell py-4">20%</td>
-
-                  <td class="col-4 col-md-1 text-center">
-
-                    <button type="button" class="btn btn-success btn_mini">Done</button>
-                  </td>
-
-                  <td class="col-4 col-md-2 text-center">
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-pen"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-
-                </tr>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th class="col-4 col-md-6" scope="col">Nome</th>
+                          <th class="col-2 d-none d-md-table-cell" scope="col">Data Inizio</th>
+                          <th class="col-1 d-none d-md-table-cell" scope="col">Roi</th>
+                          <th class="col-4 col-md-1 text-center" scope="col">Stato</th>
+                          <th class="col-4 col-md-2 text-center" scope="col">Azioni</th>
+                        </tr>
+                      </thead>
+        
+                      <tbody>
+                        <tr>
+        
+                          <td class="col-4 col-md-6 align-middle" scope="row">
+                            <i class="fa-solid fa-code red_code"></i>
+                            <span>Classe 75</span>
+                          </td>
+        
+                          <td class="col-2 d-none d-md-table-cell py-4">15 Feb 2021</td>
+        
+                          <td class="col-1 d-none d-md-table-cell py-4">20%</td>
+        
+                          <td class="col-4 col-md-1 text-center align-middle">
+        
+                            <button type="button" class="btn btn-success btn_mini">Done</button>
+                          </td>
+        
+                          <td class="col-4 col-md-2 text-center align-middle">
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+        
+                        </tr>
+                      
+                      </tbody>
+        
+                      <tbody>
+                        <tr>
+                          <td class="col-4 col-md-6 align-middle" scope="row">
+                            <i class="fa-solid fa-code red_code"></i>
+                            <span>Classe 76</span>
+                          </td>
+        
+                          <td class="col-2 d-none d-md-table-cell py-4">16 Feb 2021</td>
+        
+                          <td class="col-1 d-none d-md-table-cell py-4">20%</td>
+        
+                          <td class="col-4 col-md-1 text-center align-middle">
+        
+                            <button type="button" class="btn btn-success btn_mini">Done</button>
+                          </td>
+        
+                          <td class="col-4 col-md-2 text-center align-middle">
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>              
+                      </tbody>
+        
+                      <tbody>
+                        <tr>
+                          <td class="col-4 col-md-6 align-middle" scope="row">
+                            <i class="fa-solid fa-code red_code"></i>
+                            <span>Classe 77</span>
+                          </td>
+        
+                          <td class="col-2 d-none d-md-table-cell py-4">17 Feb 2021</td>
+        
+                          <td class="col-1 d-none d-md-table-cell py-4">20%</td>
+        
+                          <td class="col-4 col-md-1 text-center align-middle">
+        
+                            <button type="button" class="btn btn-warning white btn_mini">Process</button>
+                          </td>
+        
+                          <td class="col-4 col-md-2 text-center align-middle">
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>              
+                      </tbody>
+        
+                      <tbody>
+                        <tr>
+                          <td class="col-4 col-md-6 align-middle" scope="row">
+                            <i class="fa-solid fa-code red_code"></i>
+                            <span>Classe 78</span>
+                          </td>
+        
+                          <td class="col-2 d-none d-md-table-cell py-4">18 Feb 2021</td>
+        
+                          <td class="col-1 d-none d-md-table-cell py-4">20%</td>
+        
+                          <td class="col-4 col-md-1 text-center align-middle">
+        
+                            <button type="button" class="btn btn-success btn_mini">Done</button>
+                          </td>
+        
+                          <td class="col-4 col-md-2 text-center align-middle">
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>              
+                      </tbody>
+        
+                      <tbody>
+                        <tr>
+                          <td class="col-4 col-md-6 align-middle" scope="row">
+                            <i class="fa-solid fa-code red_code"></i>
+                            <span>Classe 79</span>
+                          </td>
+        
+                          <td class="col-2 d-none d-md-table-cell py-4">19 Feb 2021</td>
+        
+                          <td class="col-1 d-none d-md-table-cell py-4">20%</td>
+        
+                          <td class="col-4 col-md-1 text-center align-middle">
+        
+                            <button type="button" class="btn btn-danger btn_mini">Failed</button>
+                          </td>
+        
+                          <td class="col-4 col-md-2 text-center align-middle">
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>              
+                      </tbody>
+        
+                      <tbody>
+                        <tr>
+                          <td class="col-4 col-md-6 align-middle" scope="row">
+                            <i class="fa-solid fa-code red_code"></i>
+                            <span>Classe 80</span>
+                          </td>
+        
+                          <td class="col-2 d-none d-md-table-cell py-4">20 Feb 2021</td>
+        
+                          <td class="col-1 d-none d-md-table-cell py-4">20%</td>
+        
+                          <td class="col-4 col-md-1 text-center align-middle">
+        
+                            <button type="button" class="btn btn-success btn_mini">Done</button>
+                          </td>
+        
+                          <td class="col-4 col-md-2 text-center align-middle">
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>              
+                      </tbody>
+        
+                      <tbody>
+                        <tr>
+                          <td class="col-4 col-md-6 align-middle" scope="row">
+                            <i class="fa-solid fa-code red_code"></i>
+                            <span>Classe 81</span>
+                          </td>
+        
+                          <td class="col-2 d-none d-md-table-cell py-4">19 Feb 2021</td>
+        
+                          <td class="col-1 d-none d-md-table-cell py-4">20%</td>
+        
+                          <td class="col-4 col-md-1 text-center align-middle">
+        
+                            <button type="button" class="btn btn-danger btn_mini">Failed</button>
+                          </td>
+        
+                          <td class="col-4 col-md-2 text-center align-middle">
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>              
+                      </tbody>
+        
+                      <tbody>
+                        <tr>
+                          <td class="col-4 col-md-6 align-middle" scope="row">
+                            <i class="fa-solid fa-code red_code"></i>
+                            <span>Classe 82</span>
+                          </td>
+        
+                          <td class="col-2 d-none d-md-table-cell py-4">20 Feb 2021</td>
+        
+                          <td class="col-1 d-none d-md-table-cell py-4">20%</td>
+        
+                          <td class="col-4 col-md-1 text-center align-middle">
+        
+                            <button type="button" class="btn btn-success btn_mini">Done</button>
+                          </td>
+        
+                          <td class="col-4 col-md-2 text-center align-middle">
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-dark grey">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>              
+                      </tbody>
+        
+                    </table>
+                    
+                  </div>
+                </div>                
               
-              </tbody>
-
-              <tbody>
-                <tr>
-                  <td class="col-4 col-md-6" scope="row">
-                    <i class="fa-solid fa-code red_code"></i>
-                    <span>Classe 76</span>
-                  </td>
-
-                  <td class="col-2 d-none d-md-table-cell py-4">16 Feb 2021</td>
-
-                  <td class="col-1 d-none d-md-table-cell py-4">20%</td>
-
-                  <td class="col-4 col-md-1 text-center">
-
-                    <button type="button" class="btn btn-success btn_mini">Done</button>
-                  </td>
-
-                  <td class="col-4 col-md-2 text-center">
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-pen"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>              
-              </tbody>
-
-              <tbody>
-                <tr>
-                  <td class="col-4 col-md-6" scope="row">
-                    <i class="fa-solid fa-code red_code"></i>
-                    <span>Classe 77</span>
-                  </td>
-
-                  <td class="col-2 d-none d-md-table-cell py-4">17 Feb 2021</td>
-
-                  <td class="col-1 d-none d-md-table-cell py-4">20%</td>
-
-                  <td class="col-4 col-md-1 text-center">
-
-                    <button type="button" class="btn btn-warning white btn_mini">Process</button>
-                  </td>
-
-                  <td class="col-4 col-md-2 text-center">
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-pen"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>              
-              </tbody>
-
-              <tbody>
-                <tr>
-                  <td class="col-4 col-md-6" scope="row">
-                    <i class="fa-solid fa-code red_code"></i>
-                    <span>Classe 78</span>
-                  </td>
-
-                  <td class="col-2 d-none d-md-table-cell py-4">18 Feb 2021</td>
-
-                  <td class="col-1 d-none d-md-table-cell py-4">20%</td>
-
-                  <td class="col-4 col-md-1 text-center">
-
-                    <button type="button" class="btn btn-success btn_mini">Done</button>
-                  </td>
-
-                  <td class="col-4 col-md-2 text-center">
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-pen"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>              
-              </tbody>
-
-              <tbody>
-                <tr>
-                  <td class="col-4 col-md-6" scope="row">
-                    <i class="fa-solid fa-code red_code"></i>
-                    <span>Classe 79</span>
-                  </td>
-
-                  <td class="col-2 d-none d-md-table-cell py-4">19 Feb 2021</td>
-
-                  <td class="col-1 d-none d-md-table-cell py-4">20%</td>
-
-                  <td class="col-4 col-md-1 text-center">
-
-                    <button type="button" class="btn btn-danger btn_mini">Failed</button>
-                  </td>
-
-                  <td class="col-4 col-md-2 text-center">
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-pen"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>              
-              </tbody>
-
-              <tbody>
-                <tr>
-                  <td class="col-4 col-md-6" scope="row">
-                    <i class="fa-solid fa-code red_code"></i>
-                    <span>Classe 80</span>
-                  </td>
-
-                  <td class="col-2 d-none d-md-table-cell py-4">20 Feb 2021</td>
-
-                  <td class="col-1 d-none d-md-table-cell py-4">20%</td>
-
-                  <td class="col-4 col-md-1 text-center">
-
-                    <button type="button" class="btn btn-success btn_mini">Done</button>
-                  </td>
-
-                  <td class="col-4 col-md-2 text-center">
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-pen"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>              
-              </tbody>
-
-              <tbody>
-                <tr>
-                  <td class="col-4 col-md-6" scope="row">
-                    <i class="fa-solid fa-code red_code"></i>
-                    <span>Classe 81</span>
-                  </td>
-
-                  <td class="col-2 d-none d-md-table-cell py-4">19 Feb 2021</td>
-
-                  <td class="col-1 d-none d-md-table-cell py-4">20%</td>
-
-                  <td class="col-4 col-md-1 text-center">
-
-                    <button type="button" class="btn btn-danger btn_mini">Failed</button>
-                  </td>
-
-                  <td class="col-4 col-md-2 text-center">
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-pen"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>              
-              </tbody>
-
-              <tbody>
-                <tr>
-                  <td class="col-4 col-md-6" scope="row">
-                    <i class="fa-solid fa-code red_code"></i>
-                    <span>Classe 82</span>
-                  </td>
-
-                  <td class="col-2 d-none d-md-table-cell py-4">20 Feb 2021</td>
-
-                  <td class="col-1 d-none d-md-table-cell py-4">20%</td>
-
-                  <td class="col-4 col-md-1 text-center">
-
-                    <button type="button" class="btn btn-success btn_mini">Done</button>
-                  </td>
-
-                  <td class="col-4 col-md-2 text-center">
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-pen"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-dark grey">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>              
-              </tbody>
-
-            </table>
-
-          </div>
-          
-          <div class="faq col-lg-8 nv_layout overflow-hidden mt-4">
-
-            <h4 class="black bg-body-secondary bdb-g py-3 ps-3">F.A.Q.</h4>
-            
-
-            <div class="accordion accordion-flush px-3 py-2" id="accordionFlushExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Come aggiungere un nuovo studente?
-                  </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                </div>
+                
+    
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Come posso accedere alle informazioni del mio account?
-                  </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+              
+              <div class="faq pt-4">
+    
+                <div class="card black">
+                  <div class="card-header fs-4 fw-semibold">
+                    F.A.Q.
+                  </div>
+                  <div class="card-body">
+
+                    <div class="accordion accordion-flush px-3 py-2" id="accordionFlushExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Come aggiungere un nuovo studente?
+                          </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Come posso accedere alle informazioni del mio account?
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Posso usare questa dashboard da mobile?
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Posso usare questa dashboard da mobile?
-                  </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                </div>
-              </div>
+                
+    
+                
+                
+              </div>  
+
             </div>
-            
+
+            <div class="col-lg-4 py-4">
+
+              <div class="todo">
+
+                <div class="card black">
+
+                  <div class="card-header fs-4 fw-semibold">
+                    Todo
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                        <label class="form-check-label" for="firstCheckbox">Kickoff nuove classi</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                        <label class="form-check-label" for="secondCheckbox">Lezione su Bootstrap 5 in classe #75</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                        <label class="form-check-label" for="thirdCheckbox">Controllare username github studenti</label>
+                      </li>
+                    </ul>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="grafico pt-4">
+
+                <div class="card w-100">                  
+                  <div class="card-body w-100">
+                    <div class="card black w-100" style="width: 18rem;">
+                      <img src="img/stats.jpeg" class="card-img-top" alt="Stats">
+                      <div class="card-body">
+                        <h5 class="card-title">Utenti attivi</h5>
+                        <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Gennaio: 1200</li>
+                        <li class="list-group-item">Febbraio: 800</li>
+                        <li class="list-group-item">Marzo: 1500</li>
+                      </ul>
+                      <div class="card-body">
+                        <a href="#" class="card-link">Visualizza report approfondito</a>                    
+                      </div>
+                    </div> 
+                    
+                  </div>
+                </div>
+
+                          
+
+              </div>
+
+            </div>
+
           </div>
 
-          <div class="todo col-lg-4 nv_layout overflow-hidden">
+          
 
-            <h4 class="black bg-body-secondary bdb-g py-3 ps-3">Todo</h4>
+          
 
-            <ul class="list-group p-3">
-              <li class="list-group-item">
-                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                <label class="form-check-label" for="firstCheckbox">Kickoff nuove classi</label>
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-                <label class="form-check-label" for="secondCheckbox">Lezione su Bootstrap 5 in classe #75</label>
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                <label class="form-check-label" for="thirdCheckbox">Controllare username github studenti</label>
-              </li>
-            </ul>
-
-          </div>
+          
 
         </div>
   

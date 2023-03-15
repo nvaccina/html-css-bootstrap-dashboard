@@ -73,16 +73,18 @@ main{
 .nv_container .studente{
   background-color: #1B72E8;  
 }
-.btn_studente{
-  height: 25px;
-  padding: 2px 8px;
-  border-radius: 20px;
-  font-size: 14px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.3);
-}
 .offcanvas.offcanvas-end{
   width: 100%;
+}
+.offcanvas .form-control{
+  border-left: var(--bs-border-width) solid var(--bs-border-color);
+}
+.btn_app{
+  padding: 1px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .big-count{
   font-size: 30px;
@@ -96,11 +98,6 @@ main{
 .btn_mini{
   padding: .10rem .5rem;
   font-size: .75rem;
-}
-.nv_layout{
-  border: 2px solid #D2D2D2;
-  border-radius: 10px;
-  margin-top: 2rem;
 }
 .stats img{
   width: 100%;
@@ -118,8 +115,6 @@ main{
     width: 50%;
   }
   .col-student{
-    justify-content: end;
-    padding-right: 2rem;
-    padding-bottom: 3rem;
+    justify-content: center;
   }
 }
